@@ -1,16 +1,16 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
-import { useLocation } from 'react-router-dom';
-import { fetchApi } from 'utils/fetchApi/fetchApi';
+import { useLocation, useParams } from 'react-router-dom';
+import { fetchMovie } from 'utils/fetchApi/fetchApi';
 
 export const MovieDetails = () => {
   const [movie, setMovie] = useState({});
   const location = useLocation();
-  const searchParametr = location.pathname.replace(/s/g, '');
+  const { movieId } = useParams();
 
   useEffect(() => {
-    fetchApi(searchParametr).then(data => setMovie(data));
-  }, [searchParametr]);
+    fetchMovie(movieId).then(data => setMovie(data));
+  }, [movieId]);
   console.log(movie.data);
   return <div>MovieDetails</div>;
 };

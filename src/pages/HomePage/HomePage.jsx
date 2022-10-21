@@ -4,11 +4,11 @@ import { fetchApi } from 'utils/fetchApi/fetchApi';
 
 export const HomePage = () => {
   const [movies, setMovies] = useState([]);
-  const searchParametr = 'trending/movie/week';
+
   const location = useLocation();
-  console.log(location);
+
   useEffect(() => {
-    fetchApi(searchParametr).then(resp => setMovies(resp.data.results));
+    fetchApi().then(resp => setMovies(resp.data.results));
   }, []);
   return (
     <>
