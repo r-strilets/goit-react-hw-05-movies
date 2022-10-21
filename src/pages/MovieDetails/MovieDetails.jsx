@@ -5,7 +5,7 @@ import { fetchMovie } from 'utils/fetchApi/fetchApi';
 
 export const MovieDetails = () => {
   const [movie, setMovie] = useState({});
-  const location = useLocation();
+  // const location = useLocation();
   const { movieId } = useParams();
 
   useEffect(() => {
