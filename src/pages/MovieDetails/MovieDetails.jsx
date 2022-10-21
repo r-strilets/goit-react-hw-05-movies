@@ -10,7 +10,7 @@ export const MovieDetails = () => {
   const { movieId } = useParams();
 
   useEffect(() => {
-    fetchMovie(movieId).then(data => setMovie(data));
+    fetchMovie(movieId).then(setMovie);
   }, [movieId]);
   console.log(movie.data);
   return <div>MovieDetails</div>;
