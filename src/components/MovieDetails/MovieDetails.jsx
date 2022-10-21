@@ -2,7 +2,7 @@ import { BackButton } from 'components/BackButton/BackButton';
 import css from './MovieDetails.module.css';
 
 import { Link } from 'react-router-dom';
-export const MovieDetails = ({ movie, onBtnClick, movieId }) => {
+export const MovieDetails = ({ movie, onBtnClick }) => {
   return (
     <>
       <BackButton onBtnClick={onBtnClick} />
