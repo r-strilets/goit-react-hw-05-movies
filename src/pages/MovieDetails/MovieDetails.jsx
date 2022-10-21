@@ -1,6 +1,7 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
-import { useLocation, useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
+// import { useLocation } from 'react-router-dom';
 import { fetchMovie } from 'utils/fetchApi/fetchApi';
 
 export const MovieDetails = () => {
