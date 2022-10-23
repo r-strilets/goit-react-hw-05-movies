@@ -28,16 +28,16 @@ export const MovieDetails = ({ movie, onBtnClick }) => {
       </div>
 
       <p>aditional information</p>
-      <ul>
-        <Suspense fallback={null}>
+      <Suspense fallback={null}>
+        <ul>
           <li>
             <Link to={`cast`}>Cast</Link>
           </li>
           <li>
             <Link to={`reviews`}>Reviews</Link>
           </li>
-        </Suspense>
-      </ul>
+        </ul>
+      </Suspense>
     </>
   );
 };
