@@ -19,13 +19,13 @@ const MoviesPage = () => {
     if (query === '') {
       return;
     }
-    setSeacrhParams({ query: query });
+
     fetchMoviesByQuery(query)
       .then(resp => setMovies(resp.data.results))
       .catch(setError)
       .finally(() => setIsloading(false));
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [query, seacrhParams]);
+  }, [query]);
   return (
     <>
       <form action="" onSubmit={e => onSubmit(e)}>
