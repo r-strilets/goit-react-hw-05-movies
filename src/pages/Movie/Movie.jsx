@@ -1,8 +1,7 @@
-import { MovieDetails } from 'components/MovieDetails/MovieDetails';
-
 import { useState, useEffect } from 'react';
 import { useNavigate, useParams, useLocation, Outlet } from 'react-router-dom';
 import { fetchMovie } from 'utils/fetchApi/fetchApi';
+import { MovieDetails } from 'components/MovieDetails/MovieDetails';
 
 // import css from './MovieDetails.module.css';
 
@@ -37,8 +36,8 @@ export const Movie = () => {
         <>
           <MovieDetails
             movie={movie}
-            onBtnClick={onBtnClick}
             movieId={movieId}
+            onBtnClick={onBtnClick}
           />
           <Outlet />
         </>
