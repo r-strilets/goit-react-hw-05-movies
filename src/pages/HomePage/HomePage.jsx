@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 
 import { fetchApi } from 'utils/fetchApi/fetchApi';
 
-export const HomePage = () => {
+const HomePage = () => {
   const [movies, setMovies] = useState([]);
   const [isloading, setIsloading] = useState(false);
   const [error, setError] = useState(null);
@@ -24,3 +24,4 @@ export const HomePage = () => {
     </>
   );
 };
+export default HomePage;

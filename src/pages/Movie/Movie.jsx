@@ -3,8 +3,6 @@ import { useNavigate, useParams, useLocation, Outlet } from 'react-router-dom';
 import { fetchMovie } from 'utils/fetchApi/fetchApi';
 import { MovieDetails } from 'components/MovieDetails/MovieDetails';
 
-// import css from './MovieDetails.module.css';
-
 export const Movie = () => {
   const [movie, setMovie] = useState(null);
   const [isloading, setIsloading] = useState(false);

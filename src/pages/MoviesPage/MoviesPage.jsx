@@ -2,13 +2,13 @@ import { MoviesList } from 'components/MoviesList/MoviesList';
 import { useState, useEffect } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import { fetchMoviesByQuery } from 'utils/fetchApi/fetchApi';
-export const MoviesPage = () => {
+const MoviesPage = () => {
   const [isloading, setIsloading] = useState(false);
   const [error, setError] = useState(null);
   const [movies, setMovies] = useState(null);
 
   const [query, setQuery] = useState('');
-  const [seacrhParams, setSeacrhParams] = useSearchParams({});
+  const [setSeacrhParams] = useSearchParams({});
   const onSubmit = e => {
     e.preventDefault();
     setQuery(e.target.query.value);
@@ -38,3 +38,4 @@ export const MoviesPage = () => {
     </>
   );
 };
+export default MoviesPage;
