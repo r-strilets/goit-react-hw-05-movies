@@ -29,7 +29,7 @@ export const MovieDetails = ({ movie, onBtnClick }) => {
 
       <p>aditional information</p>
       <ul>
-        <Suspense>
+        <Suspense fallback={null}>
           <li>
             <Link to={`cast`}>Cast</Link>
           </li>
