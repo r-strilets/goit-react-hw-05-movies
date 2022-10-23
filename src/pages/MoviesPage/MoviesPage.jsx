@@ -38,4 +38,4 @@ const MoviesPage = () => {
     </>
   );
 };
-export default MoviesPage;
+export { MoviesPage };

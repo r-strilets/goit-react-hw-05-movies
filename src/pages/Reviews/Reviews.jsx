@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 import { MovieReviews } from 'components/MovieReviews/MovieReviews';
 import { fetchMovieReviews } from 'utils/fetchApi/fetchApi';
 
-export const Reviews = () => {
+const Reviews = () => {
   const [movieReviews, setMovieCredits] = useState(null);
   const [isloading, setIsloading] = useState(false);
   const [error, setError] = useState(null);
@@ -25,3 +25,4 @@ export const Reviews = () => {
     </>
   );
 };
+export default Reviews;

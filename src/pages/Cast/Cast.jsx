@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 import { fetchMovieCredits } from 'utils/fetchApi/fetchApi';
 import { MoveiCredits } from 'components/MoveiCredits/MoveiCredits';
 
-export const Cast = () => {
+const Cast = () => {
   const [movieCredits, setMovieCredits] = useState(null);
   const [isloading, setIsloading] = useState(false);
   const [error, setError] = useState(null);
@@ -26,3 +26,4 @@ export const Cast = () => {
     </>
   );
 };
+export default Cast;
