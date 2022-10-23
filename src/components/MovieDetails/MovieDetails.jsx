@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { BackButton } from 'components/BackButton/BackButton';
 import css from './MovieDetails.module.css';
+import { Suspense } from 'react';
 
 export const MovieDetails = ({ movie, onBtnClick }) => {
   return (
@@ -28,12 +29,14 @@ export const MovieDetails = ({ movie, onBtnClick }) => {
 
       <p>aditional information</p>
       <ul>
-        <li>
-          <Link to={`cast`}>Cast</Link>
-        </li>
-        <li>
-          <Link to={`reviews`}>Reviews</Link>
-        </li>
+        <Suspense>
+          <li>
+            <Link to={`cast`}>Cast</Link>
+          </li>
+          <li>
+            <Link to={`reviews`}>Reviews</Link>
+          </li>
+        </Suspense>
       </ul>
     </>
   );

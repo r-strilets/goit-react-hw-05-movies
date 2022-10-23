@@ -1,6 +1,5 @@
 import { Navigation } from '../Navigation/Navigation';
 import { Outlet } from 'react-router-dom';
-import { Suspense } from 'react';
 
 export const Layout = () => {
   return (
@@ -9,9 +8,7 @@ export const Layout = () => {
         <Navigation />
       </header>
       <main>
-        <Suspense>
-          <Outlet />
-        </Suspense>
+        <Outlet />
       </main>
     </>
   );
