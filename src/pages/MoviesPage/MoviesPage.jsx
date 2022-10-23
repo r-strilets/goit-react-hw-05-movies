@@ -25,7 +25,7 @@ const MoviesPage = () => {
       .catch(setError)
       .finally(() => setIsloading(false));
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [query]);
+  }, [query, seacrhParams]);
   return (
     <>
       <form action="" onSubmit={e => onSubmit(e)}>
