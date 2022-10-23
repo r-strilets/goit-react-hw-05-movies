@@ -6,12 +6,12 @@ export const Layout = () => {
   return (
     <>
       <header>
-        <Suspense>
-          <Navigation />
-        </Suspense>
+        <Navigation />
       </header>
       <main>
-        <Outlet />
+        <Suspense>
+          <Outlet />
+        </Suspense>
       </main>
     </>
   );
