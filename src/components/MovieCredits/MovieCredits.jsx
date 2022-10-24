@@ -1,10 +1,11 @@
+import css from './MovieCredits.module.css';
 const MoveiCredits = ({ movieCredits }) => {
   return (
     <>
       <ul>
         {movieCredits &&
           movieCredits.map(credit => (
-            <li className="" key={credit.cast_id}>
+            <li className={css['cast-item']} key={credit.cast_id}>
               <img
                 src={
                   credit.profile_path
@@ -15,8 +16,10 @@ const MoveiCredits = ({ movieCredits }) => {
                 width="50"
                 height="75"
               />
-              <h4>{credit.name}</h4>
-              <p>Character: {credit.character}</p>
+              <div>
+                <h4>{credit.name}</h4>
+                <p>Character: {credit.character}</p>
+              </div>
             </li>
           ))}
       </ul>

@@ -1,7 +1,7 @@
 import { useParams } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import { fetchMovieCredits } from 'utils/fetchApi/fetchApi';
-import { MoveiCredits } from 'components/MoveiCredits/MoveiCredits';
+import { MoveiCredits } from 'components/MovieCredits/MovieCredits';
 
 const Cast = () => {
   const [movieCredits, setMovieCredits] = useState(null);
