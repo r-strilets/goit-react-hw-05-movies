@@ -1,0 +1,1 @@
+{"version":3,"file":"static/css/776.3af64ac2.chunk.css","mappings":"AAAA,+BACE,YACF","sources":["components/MovieCredits/MovieCredits.module.css"],"sourcesContent":[".cast-item {\n  display: flex;\n}\n"],"names":[],"sourceRoot":""}
