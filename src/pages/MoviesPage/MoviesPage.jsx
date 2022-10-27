@@ -1,12 +1,11 @@
 import { MoviesList } from 'components/MoviesList/MoviesList';
 import { useState, useEffect } from 'react';
-import { useSearchParams, useLocation } from 'react-router-dom';
+import { useSearchParams } from 'react-router-dom';
 import { fetchMoviesByQuery } from 'utils/fetchApi/fetchApi';
 const MoviesPage = () => {
   const [isloading, setIsloading] = useState(false);
   const [error, setError] = useState(null);
   const [movies, setMovies] = useState(null);
-  const location = useLocation();
   const [seacrhParams, setSeacrhParams] = useSearchParams({});
   const [query, setQuery] = useState(seacrhParams.get('query') ?? '');
   const onSubmit = e => {
@@ -21,7 +20,6 @@ const MoviesPage = () => {
       return;
     }
     setSeacrhParams({ query: query });
-    // setQuery(seacrhParams.query);
 
     fetchMoviesByQuery(query)
       .then(resp => setMovies(resp.data.results))
